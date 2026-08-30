@@ -23,6 +23,8 @@ Features
 🔒 Runs locally — your conversation data is not uploaded anywhere
 Important
 
+![Claude Chat Export](assets/screenshot.png)
+
 This project is a local utility.
 
 Your Claude export is processed on your computer. The application does not send your conversations to a server.
@@ -59,7 +61,7 @@ Claude Chat Export.exe
 and run it.
 
 No Python installation is required when using the compiled executable.
-![Claude Chat Export](assets/screenshot.png)
+
 
 Using the Application
 1. Select the JSON file
