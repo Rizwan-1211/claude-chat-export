@@ -238,6 +238,7 @@ dist\
 The ICO file is bundled into the executable, so the final application does not need claude.ico beside it.
 
 Project Structure
+
 claude-chat-export/
 │
 ├── claude_chat_export.py
@@ -253,6 +254,7 @@ claude-chat-export/
 └── .github/
     └── workflows/
         └── build-windows.yml
+
 
 Privacy
 
