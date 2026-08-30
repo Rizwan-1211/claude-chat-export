@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install PyInstaller
         run: |
           python -m pip install --upgrade pip
           python -m pip install pyinstaller
@@ -45,24 +45,29 @@ jobs:
           name: Claude-Chat-Export-Windows
           path: "dist/Claude Chat Export.exe"
 
+      - name: Create release tag
+        shell: bash
+        run: |
+          TAG="v1.0.${{ github.run_number }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag "$TAG"
+          git push origin "$TAG"
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: "v${{ github.run_number }}"
-          name: "Claude Chat Export v${{ github.run_number }}"
+          tag_name: "v1.0.${{ github.run_number }}"
+          name: "Claude Chat Export v1.0.${{ github.run_number }}"
+          body: |
+            ## Claude Chat Export
+
+            Windows executable build from commit ${{ github.sha }}.
+
+            Download **Claude Chat Export.exe** below and run it on Windows.
+
+            No Python installation is required.
           files: "dist/Claude Chat Export.exe"
           generate_release_notes: true
-:::
-
-### What changes?
-
-Your current workflow:
-
-```text
-Push main
-   ↓
-Build EXE
-   ↓
-Upload artifact
-   ↓
-❌ No Release
+          draft: false
+          prerelease: false
