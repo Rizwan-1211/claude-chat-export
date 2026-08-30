@@ -31,7 +31,7 @@ Your Claude export is processed on your computer. The application does not send 
 
 Getting Your Claude Export
 
-First export your Claude data using the official Claude data export functionality.
+First, export your Claude data using the official Claude data export functionality.
 
 The export normally contains a file similar to:
 
@@ -61,7 +61,6 @@ Claude Chat Export.exe
 and run it.
 
 No Python installation is required when using the compiled executable.
-
 
 Using the Application
 1. Select the JSON file
@@ -192,8 +191,7 @@ Tkinter is normally included with the standard Windows Python installer.
 
 No external Python packages are required to run the application itself.
 
-Check Python:
-
+Check Python
 python --version
 
 
@@ -238,7 +236,6 @@ dist\
 The ICO file is bundled into the executable, so the final application does not need claude.ico beside it.
 
 Project Structure
-
 claude-chat-export/
 │
 ├── claude_chat_export.py
@@ -254,7 +251,6 @@ claude-chat-export/
 └── .github/
     └── workflows/
         └── build-windows.yml
-
 
 Privacy
 
@@ -279,7 +275,7 @@ Claude exports may contain private information, credentials, personal conversati
 Before publishing anything to GitHub, make sure your repository contains only the application source code and non-sensitive example files.
 
 Troubleshooting
-No module named '_curses'
+No module named _curses
 
 This project does not require the Python curses module.
 
@@ -369,3 +365,7 @@ License
 This project is released under the MIT License.
 
 See LICENSE for details.
+
+:::
+
+This also fixes your **Project Structure** issue: the tree is now inside a fenced `text` block, so GitHub will preserve every line and indentation.
