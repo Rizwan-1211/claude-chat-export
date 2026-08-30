@@ -1,0 +1,4 @@
+# No third-party runtime dependencies.
+#
+# PyInstaller is only required when building the Windows executable:
+# python -m pip install pyinstaller

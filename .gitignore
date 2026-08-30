@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude/private exports
+conversations.json
+data-*/
+claude-export/
+claude_exports/
+exports/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test/private data
+test_data/
+sample_private_data/
